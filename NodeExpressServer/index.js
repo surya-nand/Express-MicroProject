@@ -164,6 +164,12 @@ const foodData =
   }
 ]
 
+//initital web page
+app.get('/', (req,res) =>{
+  res.sendFile(__dirname+'/sample.html')
+})
+
+
 //Returns list of all the foodData
 app.get('/all', (req,res) =>{
     res.json(foodData)
